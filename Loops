@@ -38,3 +38,4 @@ if __name__ == "__main__":
 # normally, in python, no index variable. ..there is no loop counter. But, you can get one. 
 #using the enumerate() function to get index 
 # for i (or index), d in "enumerate" item. So, we get the value for the day that in the collection, and then its NUMERICAL INDEX
+#
