@@ -1,0 +1,28 @@
+def main():
+  x, y = 100, 100
+  if(x < y):                          
+    st= "x is less than y"
+  elif (x == y):
+    st= "x is same as y"
+  else:
+    st= "x is greater than y"
+  print st                             
+  
+  
+  
+
+  st = "x is less than y" if (x < y) else "x is greater than or equal to y"
+  print st  
+  
+  
+  
+if __name__ == "__main__":
+  main()
+  
+  
+  
+  
+  
+#we're compaing x to y. if x is less than y, then it will print the statement "st" X is less than Y". When you change it to x, y = 1000, 100, you come up with an error message that explains the local variable statement wasnt executed because x was > than y for this conditional. 
+# So, we need to come up with a conditional statement that will add in the case where this is false. So the else condition makes "IN ALL OTHER CASES" print the alternative- being x is greater than y
+# Python has what's called "conditional statements let you use "a if C else b" instead of the entire thing above. You can WRITE CONDITIONAL STATEMENTS IN ONE LINE. 
