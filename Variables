@@ -16,3 +16,4 @@ def someFunction():
 
 #even though the variable is decalred in the first line, you can re-declare it and it works just fine. First it was 0
 and now the variable is worth "ABC". This "str" object defines the string type thats printed. Global vs. local variables in functions.
+#
