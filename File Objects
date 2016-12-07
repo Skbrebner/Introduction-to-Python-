@@ -1,0 +1,48 @@
+
+def main(): 
+  f = open("textfile.txt","w+")
+
+  f = open("textfile.txt","a+")
+
+  for i in range(10):
+    f.write("This is line %d\r\n" % (i+1))
+    
+   
+  f = open("textfile.txt","r")
+  if f.mode == 'r': 
+
+    contents = f.read()
+    print contents
+    
+  f.close()
+  
+   fl = f.readlines() 
+   for x in fl:
+     print x
+     
+  if __name__ == "__main__":main()
+
+# Python has build in methods for opening file objects. 
+#You can open files, write data into them, add data onto the end, read the data back in
+#TO start, you dont have to write in any imports. Python does it automatically.  
+#Creates a variable named "F", then we're calling the function "open" to opean a "FILE NAME" called 
+#textfile.txt. 
+
+#The function 'Open' takes two arguements- the file name you want to open, and a 'string' representing
+#the kinds of permissions, or operations, you want to do on the file. 'w' means write. + means create
+#it if it doesnt exist. 
+
+#First, we open the file ,
+#Then, the second block of code shows us write some lines of data to the file and finished with a
+#'close the file when done' 
+
+#Then, you can open a txt file for writing also if you use "append access" (a) instead of "write" (w)
+#When I open up a file for writing, I'm going to overwrite all the contents that are already in there. 
+#If all I want to do is add stuff onto the end of the file, I use the append permission.
+
+#10 lines of data that read "this is line ___" render 
+
+#Then we must comment out the other openinig, reading, and writing of the files through other methods so that
+#we can call 'open' to read the permission 
+
+#calling the f.readlines() function is useful for reading each line into a list, then printing it out. 
