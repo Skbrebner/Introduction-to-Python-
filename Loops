@@ -1,0 +1,40 @@
+def main():
+  x = 0
+  while (x < 5):   
+     print x                    
+     x = x + 1
+     
+  for x in range(5,10):      
+    print x
+    
+  days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]         
+  for d in days:
+    print d
+    
+  for x in range(5,10):
+   if (x == 7): break                  
+    if (x % 2 == 0): continue               
+    print x
+    
+    
+    
+
+days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]    
+ i, d in enumerate(days):                
+  print i, d
+    
+if __name__ == "__main__":
+  main()
+  
+  
+  
+  
+  
+  
+# define a "while" loop- "a while loop EXECUTES WHILE the condition contained inside the (parenthesis ) is true.
+# these blocks of code pertain to the indent under while instead of main part of function. We are going to print the value of x (0), then add +1 increments until it hits the last number its less than (5). . 
+#the "break" statement is used to break the execution of a loop, is a condition is met, or some other reason. The break statement, causes the for loop to execute, but terminte to the next block of code..which is the end of this whole function. Once the original loop gets to 7, (from 5-10), it breaks the loop.  
+# the "continue" statement skips the rest of the loop, when its encountered. If x Modulo 2 (take x and divide it by 2) is equal to 0, then continue. It means, it wont do the statement "print" it will go back up to the top and do it again for all numbers in the range. If it comes accross an EVEN number, then dont print it out. 
+# normally, in python, no index variable. ..there is no loop counter. But, you can get one. 
+#using the enumerate() function to get index 
+# for i (or index), d in "enumerate" item. So, we get the value for the day that in the collection, and then its NUMERICAL INDEX
