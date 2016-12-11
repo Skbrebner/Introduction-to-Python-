@@ -1,0 +1,33 @@
+
+import os
+import shutil
+from os import path
+
+def main():
+  if path.exists("newfile.txt"):  # make a duplicate of an existing file
+    src = path.realpath("newfile.txt"); # get the path to the file in the current directory
+    
+    head, tail = path.split(src)
+    print "path: " + head
+    print "file: " + tail
+    
+    dst = src + ".bak" # let's make a backup copy by appending "bak" to the name
+    shutil.copy(src,dst)     # now use the shell to make a copy of the file
+    
+    os.rename("textfile.txt", "newfile.txt") # rename the original file
+  
+  root_dir,tail = path.split(src)
+  shutil.make_archive("archive", "zip", root_dir)
+  
+  root_dir,tail = path.split(src)
+  shutil.make_archive("archive", "zip", root_dir) # now put things into a ZIP archive
+
+  
+    with ZipFile("testzip.zip","w") as newzip:   # more fine-grained control over ZIP files
+      newzip.write("newfile.txt")
+      newzip.write("textfile.txt.bak") 
+      
+if __name__ == "__main__":main()
+
+#Quiz question: "+" means 'if it's not already there, make it for me.
+# Python provides a set of utlilties for manipulating files using the operating systems shell utilities. 
